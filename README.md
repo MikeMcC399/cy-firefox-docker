@@ -27,6 +27,6 @@ Other
 
 Repo https://github.com/MikeMcC399/cy-firefox-docker demonstrates this issue using
 
-[cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1](https://hub.docker.com/layers/cypress/browsers/node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1/images/sha256-e4c1a47c8107c37ca47398d8936743965d871c7285f58b852d5cb2658c400922?context=explore)
+[cypress/browsers:node-20.5.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1](https://hub.docker.com/layers/cypress/browsers/node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1/images/sha256-e4c1a47c8107c37ca47398d8936743965d871c7285f58b852d5cb2658c400922?context=explore)
 
 See [.github/workflows/firefox.yml](https://github.com/MikeMcC399/cy-firefox-docker/blob/master/.github/workflows/firefox.yml)
