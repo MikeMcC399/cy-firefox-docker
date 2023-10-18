@@ -4,7 +4,7 @@ jobs:
   firefox-no-docker:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - run: npm ci
     - run: firefox --version
     - run: npx cypress run --browser firefox
@@ -15,7 +15,7 @@ jobs:
       image: cypress/browsers:node-20.5.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - run: npm ci
     - run: firefox --version
     - run: npx cypress run --browser firefox
@@ -26,7 +26,7 @@ jobs:
       image: cypress/browsers:node-20.5.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - run: firefox --version
     - uses: cypress-io/github-action@v6
       with:
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-22.04
     container: cypress/browsers:node-20.5.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - run: npm ci
     - run: firefox --version
     - run: npx cypress info
@@ -49,7 +49,7 @@ jobs:
     container:
       image: cypress/browsers:node-20.5.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: firefox --version
       - run: npx cypress info
         if: always()
