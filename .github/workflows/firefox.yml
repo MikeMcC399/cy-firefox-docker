@@ -12,7 +12,7 @@ jobs:
   firefox-docker:
     runs-on: ubuntu-22.04
     container:
-      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+      image: cypress/browsers:latest
       options: --user 1001
     steps:
     - uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
   firefox-docker-cy-gha-1001:
     runs-on: ubuntu-22.04
     container:
-      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+      image: cypress/browsers:latest
       options: --user 1001
     steps:
     - uses: actions/checkout@v4
@@ -34,7 +34,7 @@ jobs:
 
   firefox-docker-root:
     runs-on: ubuntu-22.04
-    container: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+    container: cypress/browsers:latest
     steps:
     - uses: actions/checkout@v4
     - run: npm ci
@@ -47,7 +47,7 @@ jobs:
   firefox-docker-cy-gha-root:
     runs-on: ubuntu-22.04
     container:
-      image: cypress/browsers:node-20.9.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+      image: cypress/browsers:latest
     steps:
       - uses: actions/checkout@v4
       - run: firefox --version
