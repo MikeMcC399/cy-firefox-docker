@@ -15,30 +15,7 @@ jobs:
     - run: firefox --version
     - run: npx cypress run --browser firefox
 
-  firefox-docker-latest:
-    runs-on: ubuntu-22.04
-    container:
-      image: cypress/browsers:latest
-      options: --user 1001
-    steps:
-    - uses: actions/checkout@v4
-    - run: npm ci
-    - run: firefox --version
-    - run: npx cypress run --browser firefox
-
   firefox-docker-root:
-    runs-on: ubuntu-22.04
-    container: cypress/browsers:latest
-    steps:
-    - uses: actions/checkout@v4
-    - run: npm ci
-    - run: firefox --version
-    - run: npx cypress info
-      if: always()
-    - run: npx cypress run --browser firefox
-      if: always()
-
-  firefox-docker-root-latest:
     runs-on: ubuntu-22.04
     container: cypress/browsers:latest
     steps:
