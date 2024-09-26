@@ -2,7 +2,7 @@ name: firefox-docker
 on: workflow_dispatch
 jobs:
   firefox-no-docker:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@v4
     - run: npm ci
@@ -10,7 +10,7 @@ jobs:
     - run: npx cypress run --browser firefox
 
   firefox-docker:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     container:
       image: cypress/browsers:latest
       options: --user 1001
@@ -21,7 +21,7 @@ jobs:
     - run: npx cypress run --browser firefox
 
   firefox-docker-cy-gha-1001:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     container:
       image: cypress/browsers:latest
       options: --user 1001
@@ -33,7 +33,7 @@ jobs:
         browser: firefox
 
   firefox-docker-root:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     container: cypress/browsers:latest
     steps:
     - uses: actions/checkout@v4
@@ -45,7 +45,7 @@ jobs:
       if: always()
 
   firefox-docker-cy-gha-root:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     container:
       image: cypress/browsers:latest
     steps:
