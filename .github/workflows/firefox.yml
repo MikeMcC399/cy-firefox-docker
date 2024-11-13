@@ -9,7 +9,7 @@ jobs:
     - run: firefox --version
     - run: npx cypress run --browser firefox
 
-  firefox-docker:
+  firefox-docker-user-1001:
     runs-on: ubuntu-24.04
     container:
       image: cypress/browsers:latest
