@@ -1,8 +1,10 @@
 name: firefox-docker-success
 on: workflow_dispatch
+
 jobs:
   firefox-no-docker:
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     steps:
     - uses: actions/checkout@v4
     - run: npm ci
@@ -11,6 +13,7 @@ jobs:
 
   firefox-docker-user-1001:
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     container:
       image: cypress/browsers:latest
       options: --user 1001
@@ -22,6 +25,7 @@ jobs:
 
   firefox-docker-cy-gha-1001:
     runs-on: ubuntu-24.04
+    timeout-minutes: 5
     container:
       image: cypress/browsers:latest
       options: --user 1001
