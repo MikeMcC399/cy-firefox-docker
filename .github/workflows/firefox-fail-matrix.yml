@@ -1,0 +1,54 @@
+name: firefox-docker-fail-matrix
+on: workflow_dispatch
+jobs:
+  firefox-docker-root-ff-136:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    container: cypress/browsers:node-22.14.0-chrome-134.0.6998.165-1-ff-136.0.3-edge-134.0.3124.85-1
+    steps:
+    - uses: actions/checkout@v4
+    - run: npm ci
+    - run: firefox --version
+    - run: npx cypress info
+      if: always()
+    - run: npx cypress run --browser firefox
+      if: always()
+
+  firefox-docker-root-ff-137:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    container: cypress/browsers:node-22.15.0-chrome-135.0.7049.114-1-ff-137.0.2-edge-135.0.3179.85-1
+    steps:
+    - uses: actions/checkout@v4
+    - run: npm ci
+    - run: firefox --version
+    - run: npx cypress info
+      if: always()
+    - run: npx cypress run --browser firefox
+      if: always()
+
+  firefox-docker-root-ff-138:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    container: cypress/browsers:node-22.15.0-chrome-136.0.7103.92-1-ff-138.0.1-edge-136.0.3240.50-1
+    steps:
+    - uses: actions/checkout@v4
+    - run: npm ci
+    - run: firefox --version
+    - run: npx cypress info
+      if: always()
+    - run: npx cypress run --browser firefox
+      if: always()
+
+  # firefox-docker-root-ff-latest:
+  #   runs-on: ubuntu-24.04
+  #   timeout-minutes: 2
+  #   container: cypress/browsers:latest
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - run: npm ci
+  #   - run: firefox --version
+  #   - run: npx cypress info
+  #     if: always()
+  #   - run: npx cypress run --browser firefox
+  #     if: always()
