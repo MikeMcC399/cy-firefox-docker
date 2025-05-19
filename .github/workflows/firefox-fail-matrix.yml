@@ -40,15 +40,15 @@ jobs:
     - run: npx cypress run --browser firefox
       if: always()
 
-  # firefox-docker-root-ff-latest:
-  #   runs-on: ubuntu-24.04
-  #   timeout-minutes: 2
-  #   container: cypress/browsers:latest
-  #   steps:
-  #   - uses: actions/checkout@v4
-  #   - run: npm ci
-  #   - run: firefox --version
-  #   - run: npx cypress info
-  #     if: always()
-  #   - run: npx cypress run --browser firefox
-  #     if: always()
+  firefox-docker-root-ff-latest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    container: cypress/browsers:latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: npm ci
+    - run: firefox --version
+    - run: npx cypress info
+      if: always()
+    - run: npx cypress run --browser firefox
+      if: always()
