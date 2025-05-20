@@ -1,5 +1,10 @@
-name: firefox-docker-fail-matrix
+name: browsers-fail-matrix
 on: workflow_dispatch
+
+defaults:
+  run:
+    working-directory: examples/basic
+
 jobs:
   firefox-docker-root-ff-136:
     runs-on: ubuntu-24.04
